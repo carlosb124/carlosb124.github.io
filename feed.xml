@@ -3,6 +3,7 @@
     <channel>
         <title>Mi Blog de Viajes | Carlos Andrei Buceag</title>
         <link>https://carlosb124.github.io/</link>
+        <guid>https://carlosb124.github.io/</guid>
         <description>Explorando el mundo, una historia a la vez</description>
         <language>es</language>
         <lastBuildDate>Sat, 01 Mar 2025 12:00:00 +0100</lastBuildDate>
@@ -17,6 +18,7 @@
         <item>
             <title>París: La Ciudad de la Luz</title>
             <link>https://carlosb124.github.io/destinos/paris.html</link>
+            <guid>https://carlosb124.github.io/destinos/paris.html</guid>
             <pubDate>Fri, 25 Oct 2024 10:00:00 +0100</pubDate>
             <description><![CDATA[Descubre la magia de la Ciudad de la Luz, desde la icónica Torre Eiffel hasta los encantadores cafés en las calles empedradas. Una experiencia única que combina historia, arte y romanticismo.]]></description>
             <category>Francia</category>
@@ -26,6 +28,7 @@
         <item>
             <title>Roma: La Ciudad Eterna</title>
             <link>https://carlosb124.github.io/destinos/roma.html</link>
+            <guid>https://carlosb124.github.io/destinos/roma.html</guid>
             <pubDate>Sun, 15 Sep 2024 14:30:00 +0100</pubDate>
             <description><![CDATA[Sumérgete en la historia de la Ciudad Eterna, donde cada calle cuenta una historia milenaria. Desde el majestuoso Coliseo hasta la Plaza de San Pedro, Roma te cautivará.]]></description>
             <category>Italia</category>
@@ -35,6 +38,7 @@
         <item>
             <title>Barcelona: La Joya del Mediterráneo</title>
             <link>https://carlosb124.github.io/destinos/barcelona.html</link>
+            <guid>https://carlosb124.github.io/destinos/barcelona.html</guid>
             <pubDate>Mon, 5 Aug 2024 09:15:00 +0100</pubDate>
             <description><![CDATA[Explora la vibrante capital catalana, donde el arte modernista de Gaudí se mezcla con playas mediterráneas y una gastronomía excepcional. Una ciudad que nunca deja de sorprender.]]></description>
             <category>España</category>
@@ -44,6 +48,7 @@
         <item>
             <title>Sobre Carlos Andrei Buceag</title>
             <link>https://carlosb124.github.io/sobre-mi.html</link>
+            <guid>https://carlosb124.github.io/sobre-mi.html</guid>
             <pubDate>Thu, 25 Jul 2024 14:40:14 +0100</pubDate>
             <description><![CDATA[¡Hola! Soy Carlos, un apasionado viajero y narrador de historias. Mi amor por la exploración y la aventura me ha llevado a recorrer diversos rincones del mundo, capturando momentos únicos y experiencias inolvidables que comparto en este blog.]]></description>
             <category>Presentación</category>
