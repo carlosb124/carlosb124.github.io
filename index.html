@@ -16,6 +16,12 @@
             --transition: all 0.3s ease;
         }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -25,41 +31,55 @@
             color: var(--text-color);
         }
 
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Header Improvements */
         header {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/travel-hd-bezzbjmijn9wq5bs.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 120px 20px;
+            padding: 8rem 1rem;
             text-align: center;
             position: relative;
         }
 
         .header-content {
             background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
+            padding: 2rem;
             border-radius: 15px;
             display: inline-block;
             backdrop-filter: blur(5px);
+            max-width: 90%;
         }
 
         header h1 {
-            font-size: 3.5em;
+            font-size: 3rem;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         header p {
-            font-size: 1.2em;
-            margin-top: 10px;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         /* Navigation Improvements */
         nav {
             background-color: white;
-            padding: 20px 0;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -68,7 +88,7 @@
         }
 
         nav.scrolled {
-            padding: 15px 0;
+            padding: 0.5rem 0;
             background-color: rgba(255, 255, 255, 0.95);
         }
 
@@ -76,7 +96,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 1.5rem;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -87,7 +107,7 @@
             text-decoration: none;
             font-weight: 500;
             position: relative;
-            padding: 5px 0;
+            padding: 0.25rem 0;
         }
 
         nav ul li a::after {
@@ -105,12 +125,23 @@
             width: 100%;
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
         /* Destinations Section Improvements */
         .destinos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            padding: 40px 0;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
         }
 
         .destino {
@@ -119,6 +150,9 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .destino:hover {
@@ -128,7 +162,7 @@
 
         .destino img {
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: cover;
             transition: var(--transition);
         }
@@ -138,31 +172,48 @@
         }
 
         .destino-content {
-            padding: 25px;
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .destino-meta {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
             color: #666;
-            font-size: 0.9em;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
         }
 
         .destino-meta i {
             color: var(--primary-color);
         }
 
+        .destino-content h2 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .destino-content p {
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
         .leer-mas {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 0.75rem 1.5rem;
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
             border-radius: 25px;
             transition: var(--transition);
             font-weight: 500;
+            align-self: flex-start;
+            margin-top: auto;
         }
 
         .leer-mas:hover {
@@ -173,31 +224,33 @@
         /* About Me Section Improvements */
         .sobre-mi {
             background: white;
-            padding: 60px;
-            margin: 60px 0;
+            padding: 3rem;
+            margin: 3rem 0;
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 40px;
+            grid-template-columns: 1fr;
+            gap: 2rem;
             align-items: center;
         }
 
         .sobre-mi img {
             width: 100%;
+            max-width: 400px;
             height: auto;
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 0 auto;
         }
 
         .sobre-mi-content h2 {
             color: var(--secondary-color);
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
         .sobre-mi-content p {
-            font-size: 1.1em;
+            font-size: 1.1rem;
             line-height: 1.8;
             color: #666;
         }
@@ -205,31 +258,32 @@
         /* Contact Form Improvements */
         .contacto {
             background: white;
-            padding: 60px;
-            margin: 60px 0;
+            padding: 3rem 1.5rem;
+            margin: 3rem 0;
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .contacto h2 {
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
+            font-size: 2rem;
+            margin-bottom: 2rem;
             color: var(--secondary-color);
         }
 
         .formulario {
             max-width: 700px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .campo-formulario {
-            margin-bottom: 25px;
+            margin-bottom: 1.5rem;
         }
 
         .campo-formulario label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             color: var(--secondary-color);
             font-weight: 500;
         }
@@ -237,11 +291,16 @@
         .campo-formulario input,
         .campo-formulario textarea {
             width: 100%;
-            padding: 15px;
+            padding: 0.75rem;
             border: 2px solid #eee;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 1rem;
             transition: var(--transition);
+        }
+
+        .campo-formulario textarea {
+            min-height: 120px;
+            resize: vertical;
         }
 
         .campo-formulario input:focus,
@@ -254,11 +313,11 @@
         .boton-enviar {
             background-color: var(--primary-color);
             color: white;
-            padding: 15px 30px;
+            padding: 0.75rem 1.5rem;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 500;
             width: 100%;
             transition: var(--transition);
@@ -274,17 +333,17 @@
             background-color: var(--secondary-color);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 2rem 1rem;
         }
 
         .social-links {
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
 
         .social-links a {
             color: white;
-            font-size: 24px;
-            margin: 0 10px;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
             transition: var(--transition);
         }
 
@@ -293,32 +352,83 @@
         }
 
         /* Responsive Design Improvements */
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
+            .sobre-mi {
+                grid-template-columns: 300px 1fr;
+            }
+
+            .sobre-mi img {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
             header {
-                padding: 80px 20px;
+                padding: 5rem 1rem;
             }
 
             header h1 {
-                font-size: 2.5em;
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
             }
 
             nav ul {
                 flex-direction: column;
-                gap: 15px;
+                background-color: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 0;
+                gap: 1rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                z-index: -1;
             }
 
-            .sobre-mi {
-                grid-template-columns: 1fr;
-                padding: 30px;
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+                z-index: 1;
             }
 
-            .sobre-mi img {
-                width: 200px;
-                margin: 0 auto;
+            .contacto, .sobre-mi {
+                padding: 2rem 1rem;
+                margin: 2rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .destino img {
+                height: 180px;
             }
 
-            .contacto {
-                padding: 30px;
+            .destino-content {
+                padding: 1rem;
+            }
+
+            .destino-content h2 {
+                font-size: 1.25rem;
+            }
+
+            .sobre-mi-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .contacto h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
