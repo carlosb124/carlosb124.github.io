@@ -25,7 +25,7 @@
             color: var(--text-color);
         }
 
-        /* Header Improvements */
+        /* Header Styles */
         header {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/travel-hd-bezzbjmijn9wq5bs.jpg');
             background-size: cover;
@@ -56,7 +56,7 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
-        /* Navigation Improvements */
+        /* Navigation Styles */
         nav {
             background-color: white;
             padding: 20px 0;
@@ -65,11 +65,6 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: var(--transition);
-        }
-
-        nav.scrolled {
-            padding: 15px 0;
-            background-color: rgba(255, 255, 255, 0.95);
         }
 
         nav ul {
@@ -105,10 +100,17 @@
             width: 100%;
         }
 
-        /* Destinations Section Improvements */
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Destinations Section */
         .destinos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             padding: 40px 0;
         }
@@ -170,7 +172,7 @@
             transform: translateY(-2px);
         }
 
-        /* About Me Section Improvements */
+        /* About Me Section */
         .sobre-mi {
             background: white;
             padding: 60px;
@@ -202,7 +204,7 @@
             color: #666;
         }
 
-        /* Contact Form Improvements */
+        /* Contact Form */
         .contacto {
             background: white;
             padding: 60px;
@@ -244,6 +246,11 @@
             transition: var(--transition);
         }
 
+        .campo-formulario textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
         .campo-formulario input:focus,
         .campo-formulario textarea:focus {
             outline: none;
@@ -269,7 +276,7 @@
             transform: translateY(-2px);
         }
 
-        /* Footer Improvements */
+        /* Footer */
         footer {
             background-color: var(--secondary-color);
             color: white;
@@ -291,42 +298,14 @@
         .social-links a:hover {
             color: var(--primary-color);
         }
-
-        /* Responsive Design Improvements */
-        @media (max-width: 768px) {
-            header {
-                padding: 80px 20px;
-            }
-
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .sobre-mi {
-                grid-template-columns: 1fr;
-                padding: 30px;
-            }
-
-            .sobre-mi img {
-                width: 200px;
-                margin: 0 auto;
-            }
-
-            .contacto {
-                padding: 30px;
-            }
-        }
     </style>
 </head>
 <body>
 <header>
-    <h1>Mi Blog de Viajes</h1>
-    <p>Explorando el mundo, una historia a la vez</p>
+    <div class="header-content">
+        <h1>Mi Blog de Viajes</h1>
+        <p>Explorando el mundo, una historia a la vez</p>
+    </div>
 </header>
 
 <nav id="navbar">
@@ -338,7 +317,7 @@
     </ul>
 </nav>
 
-<    <div class="container">
+<div class="container">
     <section id="destinos" class="destinos">
         <article class="destino">
             <img src="https://wallpapers.com/images/hd/paris-at-night-ubits20jme56nwgp.jpg" alt="París">
@@ -375,10 +354,11 @@
                 </div>
                 <h2>Barcelona</h2>
                 <p>Explora la vibrante capital catalana, donde el arte modernista de Gaudí se mezcla con playas mediterráneas y una gastronomía excepcional. Una ciudad que nunca deja de sorprender.</p>
-                <a href="https://es.wikipedia.org/wiki/Barcelona" target="_blank" class="leer-mas">Leer más  <i class="fas fa-arrow-right"></i></a>
+                <a href="https://es.wikipedia.org/wiki/Barcelona" target="_blank" class="leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>
     </section>
+
     <section id="sobre-mi" class="sobre-mi">
         <img src="/img/20240725_144014(1).jpg" alt="Foto de Carlos">
         <div class="sobre-mi-content">
@@ -422,12 +402,6 @@
     <div class="social-links">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href='#'><i class=fab fa-facebook></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
         <a href="/feed.xml" title="RSS Feed"><i class="fas fa-rss"></i></a>
-    </div>
-    <p>© 2025 Blog de Viajes de Carlos Andrei Buceag | Todos los derechos reservados</p>
-</footer>
-
-</body>
-</html>
